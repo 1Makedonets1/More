@@ -1,0 +1,291 @@
+@import "../node_modules/normalize-scss/sass/normalize/import-now";
+@import "_var.scss";
+@import "_mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  background-image: url(../images/headerBG.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: $wite-color;
+  padding-top: 280px;
+  font-family: "Josefin Sans", sans-serif;
+
+  @include e(title) {
+    max-width: 312px;
+    margin: auto;
+
+    @include m(title) {
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+
+    @include m(text) {
+      font-size: 22px;
+      letter-spacing: 4px;
+      padding-bottom: 49px;
+    }
+  }
+
+  @include e(form) {
+    max-width: 651px;
+    height: 61px;
+    margin: auto;
+    background: $wite-color;
+
+    @include m(input) {
+      width: 494px;
+      height: 50px;
+      color: $input-text;
+      font-size: 14px;
+      text-align: center;
+      border: none;
+      outline: none;
+      letter-spacing: 1px;
+    }
+  }
+
+  @include e(scroll) {
+    display: flex;
+    flex-direction: column;
+    width: 95px;
+    margin: auto;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 134px;
+
+    @include m(text) {
+      padding-bottom: 14px;
+    }
+  }
+
+  @include e(logo-menu) {
+    height: 81px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: $blue-color;
+
+    @include m(logo) {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.button {
+  border: none;
+  background: $blue-color;
+  width: 151px;
+  height: 61px;
+  border: solid 1px $wite-color;
+  color: $wite-color;
+
+  @include e(text) {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  @include e(img) {
+    margin-left: 14px;
+    margin-bottom: -4px;
+  }
+}
+
+.button:hover {
+  background: $btn-hover;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  font-family: "Aleo", serif;
+
+  @include e(item) {
+    font-size: 14px;
+    list-style-type: none;
+    margin-left: 40px;
+    text-transform: uppercase;
+
+    @include m(link) {
+      text-decoration: none;
+      color: $wite-color;
+    }
+  }
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  color: $btn-hover;
+}
+
+// header and ///////////////////////////////////////////////////////////////
+
+.aboutUs {
+  background-image: url(../images/aboutUsBG.png);
+  padding-top: 120px;
+}
+
+.aboutUs__main {
+  display: flex;
+  font-family: "Aleo", serif;
+  color: $wite-color;
+  justify-content: space-around;
+}
+
+.text {
+  flex-direction: column;
+  width: 530px;
+  justify-content: space-between;
+
+  @include e(title) {
+    font-size: 36px;
+    padding-bottom: 62px;
+    font-weight: 400;
+  }
+
+  @include e(text) {
+    font-size: 16px;
+    color: $text-color;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  @include e(button) {
+    border: none;
+    background: $blue-color;
+    width: 226px;
+    height: 61px;
+    color: $wite-color;
+  }
+}
+
+.text__button:hover {
+  background: $btn-hover;
+  cursor: pointer;
+}
+
+.images {
+  flex-direction: column;
+  width: 530px;
+  @include e(left) {
+    align-self: flex-start;
+  }
+  @include e(right) {
+    align-self: flex-end;
+  }
+}
+
+.search {
+  background: $dark-color;
+  margin-top: 125px;
+  padding-top: 50px;
+
+  @include e(icon) {
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+
+    @include m(icon) {
+      width: 100px;
+      height: 100px;
+      background: $dark-color;
+      justify-content: center;
+      border-radius: 50px;
+      z-index: 2;
+    }
+
+    @include m(line-left) {
+      display: flex;
+      width: 300px;
+      height: 200px;
+      border-top: dotted 2px $wite-color;
+      border-radius: 50% 50% 0 0;
+      margin: 10px;
+      position: absolute;
+      z-index: 1;
+      left: 175px;
+      top: -20px;
+    }
+
+    @include m(line-right) {
+      display: flex;
+      width: 300px;
+      height: 200px;
+      border-top: dotted 2px $wite-color;
+      border-radius: 50% 50% 0 0;
+      margin: 10px;
+      position: absolute;
+      z-index: 1;
+      left: 507px;
+      top: -20px;
+    }
+  }
+
+  @include e(text) {
+    display: flex;
+    max-width: 750px;
+    justify-content: space-between;
+    margin: auto;
+    color: $wite-color;
+    padding-bottom: 20px;
+  }
+}
+
+// aboutUs and///////////////////////////////////////////////////////////////////////////
+
+.up {
+  background-image: url(../images/travelUp.png);
+  padding-top: 228px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 100px;
+}
+
+.up__wrap {
+  width: 541px;
+  opacity: 0.9;
+  background: $wrap-color;
+  color: $text-color;
+  font-weight: 200;
+
+  @include m(title) {
+    color: $wite-color;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+.down {
+  background-image: url(../images/travelDown.png);
+  padding-top: 228px;
+  font-family: "Josefin Sans", sans-serif;
+  padding-left: 800px;
+
+  @include e(wrap) {
+    width: 541px;
+    opacity: 0.97;
+    background: $wrap-color;
+    color: $text-color;
+    font-weight: 200;
+
+    @include m(title) {
+      color: $wite-color;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+}
